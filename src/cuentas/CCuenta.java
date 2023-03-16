@@ -48,7 +48,8 @@ public class CCuenta {
         setSaldo(getSaldo() - cantidad);
     }
     
-    /** ENCAPSULADO DE ATRIBUTOS DE LA CLASE CCuenta */ 
+    /** *
+     * ENCAPSULADO DE ATRIBUTOS DE LA CLASE CCuenta */ 
     
     /**
      * Devuelve el nombre de la persona
