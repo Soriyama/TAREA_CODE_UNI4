@@ -1,5 +1,11 @@
-package cuentas;
+/**
+    * TAREA ED04: REFACTORIZACIÓN Y DOCUMENTACIÓN 
+    * @autor Esteban_Calo
+    * @version 1.0
+    * IDE: NETBEANS
+ */
 
+package cuentas;
 
 public class CCuenta {
 
@@ -10,7 +16,7 @@ public class CCuenta {
 
     public CCuenta() {
     }
-
+    
     public CCuenta(String nom, String cue, double sal, double tipo) {
         nombre = nom;
         cuenta = cue;
@@ -20,14 +26,18 @@ public class CCuenta {
     public double estado() {
         return getSaldo();
     }
-
+    /** 
+     * Método ingresar 
+     */
     public void ingresar(double cantidad) throws Exception {
         if (cantidad < 0) {
             throw new Exception("No se puede ingresar una cantidad negativa");
         }
         setSaldo(getSaldo() + cantidad);
     }
-
+    /** 
+     * Método Retirar
+     */
     public void retirar(double cantidad) throws Exception {
         if (cantidad <= 0) {
             throw new Exception("No se puede retirar una cantidad negativa");
@@ -37,8 +47,11 @@ public class CCuenta {
         }
         setSaldo(getSaldo() - cantidad);
     }
-
+    
+    /** ENCAPSULADO DE ATRIBUTOS DE LA CLASE CCuenta */ 
+    
     /**
+     * Devuelve el nombre de la persona
      * @return the nombre
      */
     public String getNombre() {
@@ -46,6 +59,7 @@ public class CCuenta {
     }
 
     /**
+     * Establece el nombre de la persona
      * @param nombre the nombre to set
      */
     public void setNombre(String nombre) {
@@ -53,6 +67,7 @@ public class CCuenta {
     }
 
     /**
+     * Devuelve la cuenta
      * @return the cuenta
      */
     public String getCuenta() {
@@ -60,6 +75,7 @@ public class CCuenta {
     }
 
     /**
+     * Establece la cuenta
      * @param cuenta the cuenta to set
      */
     public void setCuenta(String cuenta) {
@@ -67,6 +83,7 @@ public class CCuenta {
     }
 
     /**
+     * Devuelve el saldo de la cuenta
      * @return the saldo
      */
     public double getSaldo() {
@@ -74,6 +91,7 @@ public class CCuenta {
     }
 
     /**
+     * Establece el saldo de la cuenta
      * @param saldo the saldo to set
      */
     public void setSaldo(double saldo) {
@@ -81,6 +99,7 @@ public class CCuenta {
     }
 
     /**
+     * Devuelve el tipo de interés de la cuenta
      * @return the tipoInterés
      */
     public double getTipoInterés() {
@@ -88,6 +107,7 @@ public class CCuenta {
     }
 
     /**
+     * Establece el tipo de interés de la cuenta
      * @param tipoInterés the tipoInterés to set
      */
     public void setTipoInterés(double tipoInterés) {
